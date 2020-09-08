@@ -1,0 +1,17 @@
+# This is configuration file for qiaseq-mirna Snakemake pipeline. All external
+# resources required in the pipeline should be defined in this file.
+
+# Parameters for adapter trimming.
+trimming:
+  adapter_3: "AACTGTAGGCACCATCAAT"
+  adapter_5: "GTTCAGAGTTCTACAGTCCGACGATC"
+  illumina_adapter: "AGATCGGAAGAGCACACGTCTGAAC"
+  min_read_length: 20
+  min_read_quality: 10
+  umi_sequence: "NNNNNNNNNNNN"
+
+# Parameters for read alignment.
+fasta:
+  mature_mirna: "ftp://mirbase.org/pub/mirbase/CURRENT/mature.fa.gz"
+  hairpin_mirna: "ftp://mirbase.org/pub/mirbase/CURRENT/hairpin.fa.gz"
+  pirna: "http://www.regulatoryrna.org/database/piRNA/download/archive/v2.0/fasta/hsa.fa.gz"

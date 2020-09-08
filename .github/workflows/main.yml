@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+name: Tests
+
+# Triggers workflow on push but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# Define workflow jobs.
+jobs:
+  run_workflow:
+    runs-on: ubuntu-latest
+    steps:
+      # Check-out the repository so the workflow can access it.
+      - uses: actions/checkout@master
+      # Run Snakemake workflow.
+      - name: snakemake
+        uses: snakemake/snakemake-github-action@v1.9.0
+        with:
+          # Working directory for the execution
+          directory: .test
+          # Snakefile containing the workflow description
+          snakefile: Snakefile
+          # Additional Snakemake arguments to use
+          args: "--use-conda --show-failed-logs --cores 1 --conda-cleanup-pkgs"

@@ -1,0 +1,5 @@
+# Ignore all files in version control...
+*
+
+# ...except this .gitignore file, of course.
+!.gitignore

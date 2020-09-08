@@ -1,0 +1,55 @@
+$schema: "http://json-schema.org/draft-06/schema#"
+
+description: Configuration file for Snakemake pipeline
+
+trimming:
+  type: object
+  properties:
+    adapter_3:
+      type: string
+      description: 3' adapter sequence
+    adapter_5: 
+      type: string
+      description: 5' adapter sequence
+    illumina_adapter:
+      type: string
+      description: Illumina universal adapter sequence
+    min_read_length:
+      type: integer
+      default: 20
+      description: Read length threshold
+    min_read_quality:
+      type: integer
+      default: 10
+      description: Read quality trimming threshold
+    umi_sequence:
+      type: string
+      description: Unique Molecular Identifier sequence
+  required:
+   - adapter_3
+   - adapter_5
+   - illumina_adapter
+   - min_read_length
+   - min_read_quality
+   - umi_sequence
+
+alignment:
+  type: object
+  properties:
+    mature_mirna_fasta:
+      type: string
+      description: Mature miRNA sequence (.fasta) URL
+    hairpin_mirna_fasta:
+      type: string
+      description: Hairpin miRNA sequence (.fasta) URL
+    pirna_fasta:
+      type: string
+      description: piRNA sequence (.fasta) URL
+    ncrna_fasta:
+      type: string
+      description: ncRNA sequence (.fasta) URL
+  required:
+   - mature_mirna_fasta
+   - hairpin_mirna_fasta
+   - pirna_fasta
+   - ncrna_fasta

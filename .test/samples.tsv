@@ -1,0 +1,13 @@
+sample	fastq
+sampleA	fastq/sampleA_S1_L001_R1_001.fastq.gz
+sampleA	fastq/sampleA_S1_L002_R1_001.fastq.gz
+sampleA	fastq/sampleA_S1_L003_R1_001.fastq.gz
+sampleA	fastq/sampleA_S1_L004_R1_001.fastq.gz
+sampleB	fastq/sampleB_S2_L001_R1_001.fastq.gz
+sampleB	fastq/sampleB_S2_L002_R1_001.fastq.gz
+sampleB	fastq/sampleB_S2_L003_R1_001.fastq.gz
+sampleB	fastq/sampleB_S2_L004_R1_001.fastq.gz
+sampleC	fastq/sampleC_S3_L001_R1_001.fastq.gz
+sampleC	fastq/sampleC_S3_L002_R1_001.fastq.gz
+sampleC	fastq/sampleC_S3_L003_R1_001.fastq.gz
+sampleC	fastq/sampleC_S3_L004_R1_001.fastq.gz
